@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:masud/second_page.dart';
 
 void main() {
   runApp(AmarApp());
@@ -38,6 +39,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Center(
           child: Column(
             children: [
+
+              ElevatedButton(
+                  onPressed:(){
+                   Navigator.push(context,MaterialPageRoute
+                     (builder: (context)=>SecondPage()))
+                  },
+                  child: Text("Go To Second page")
+              ),
+
               SizedBox(
                 height: 10,
               ),
@@ -63,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-              ),
+
               child: Row(
                 children: [
                   Container(
@@ -93,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-
+              )
             ],
           ),
         ),
